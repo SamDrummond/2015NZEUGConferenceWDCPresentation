@@ -270,3 +270,71 @@ a:focus {
     font-weight: bold;
 }
 
+#contact h1{
+	font-size:175%;
+}
+
+#contact h1, p, a  {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style:    preserve-3d; /* Y U need this Firefox?! */
+    -ms-transform-style:     preserve-3d;
+    -o-transform-style:      preserve-3d;
+    transform-style:         preserve-3d;
+}
+
+#contact h1, p, a {
+    display: inline-block;
+    -webkit-transform: translateZ(40px);
+    -moz-transform:    translateZ(40px);
+    -ms-transform:     translateZ(40px);
+    -o-transform:      translateZ(40px);
+     transform:        translateZ(40px);
+
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+#contact .thanks{
+    -webkit-transform: translateZ(0px);
+    -moz-transform:    translateZ(0px);
+    -ms-transform:     translateZ(0px);
+    -o-transform:      translateZ(0px);
+    transform:         translateZ(0px);
+}
+	
+#contact .email{
+    -webkit-transform: translateZ(100px);
+    -moz-transform:    translateZ(100px);
+    -ms-transform:     translateZ(100px);
+    -o-transform:      translateZ(100px);
+    transform:         translateZ(100px);
+}
+	
+#contact .link{
+    -webkit-transform: translateZ(200px);
+    -moz-transform:    translateZ(200px);
+    -ms-transform:     translateZ(200px);
+    -o-transform:      translateZ(200px);
+    transform:         translateZ(200px);
+}
+
+#contact .source{
+    -webkit-transform: translateZ(300px);
+    -moz-transform:    translateZ(300px);
+    -ms-transform:     translateZ(300px);
+    -o-transform:      translateZ(300px);
+    transform:         translateZ(300px);
+}
+
+#contact.present h1,
+#contact.present p,
+#contact.present a {
+    -webkit-transform: translateZ(0px);
+    -moz-transform:    translateZ(0px);
+    -ms-transform:     translateZ(0px);
+    -o-transform:      translateZ(0px);
+    transform:         translateZ(0px);
+}
