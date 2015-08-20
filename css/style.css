@@ -1,0 +1,340 @@
+tml, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    min-height: 740px;
+
+    background: rgb(215, 215, 215);
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(112, 157, 203)));
+    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(112, 157, 203));
+    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(112, 157, 203));
+    background:     -ms-radial-gradient(rgb(240, 240, 240), rgb(112, 157, 203));
+    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(112, 157, 203));
+    background:         radial-gradient(rgb(240, 240, 240), rgb(112, 157, 203));
+}
+
+b, strong { font-weight: bold }
+i, em { font-style: italic }
+
+a {
+    color: inherit;
+    text-decoration: none;
+    padding: 0 0.1em;
+    background: rgba(255,255,255,0.5);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
+    border-radius: 0.2em;
+
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+a:hover,
+a:focus {
+    background: rgba(255,255,255,1);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
+}
+
+.step {
+    position: relative;
+    width: 900px;
+    padding: 40px;
+    margin: 20px auto;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -ms-box-sizing:     border-box;
+    -o-box-sizing:      border-box;
+    box-sizing:         border-box;
+
+    font-family: 'PT Serif', georgia, serif;
+    font-size: 48px;
+    line-height: 1.5;
+}
+
+.impress-enabled .step {
+    margin: 0;
+    opacity: 0.3;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
+.impress-enabled .step.active { opacity: 1 }
+
+
+.fallback-message {
+    font-family: sans-serif;
+    line-height: 1.3;
+
+    width: 780px;
+    padding: 10px 10px 0;
+    margin: 20px auto;
+
+    border: 1px solid #E4C652;
+    border-radius: 10px;
+    background: #EEDC94;
+}
+
+.fallback-message p {
+    margin-bottom: 10px;
+}
+
+.impress-supported .fallback-message {
+    display: none;
+}
+
+#Title {
+    padding: 0;
+}
+
+#Title .above {
+	font-size: 70px;
+	position: absolute;
+	top: -1.5em;
+	left: -2.5em;
+	-webkit-transform: translateZ(20px);
+	-moz-transform: translateZ(20px);
+	-ms-transform: translateZ(20px);
+	-o-transform: translateZ(20px);
+	transform: translateZ(20px);
+}
+
+#Title h1 {
+    font-size: 190px;
+
+    -webkit-transform: translateZ(50px);
+    -moz-transform:    translateZ(50px);
+    -ms-transform:     translateZ(50px);
+    -o-transform:      translateZ(50px);
+    transform:         translateZ(50px);
+}
+
+#Title .below {
+	font-size: 70px;
+	position: absolute;
+	top: 3.5em;
+	left: -2.5em;
+}
+
+#Question {
+	width:900px;
+}
+
+#Question .above{
+	position: absolute;
+	top: 0.1em;
+	left: 0.8em;;
+}
+
+#Question b {
+    font-size: 70px;   
+}
+
+#Question b {
+    display: inline-block;
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+#Question.present .scaling {
+	padding-top:10px;
+	padding-left: 60px;
+    -webkit-transform: scale(1.35);
+    -moz-transform:    scale(1.35);
+    -ms-transform:     scale(1.35);
+    -o-transform:      scale(1.35);
+    transform:         scale(1.35);
+
+    -webkit-transition-delay: 0.5s;
+    -moz-transition-delay:    0.5s;
+    -ms-transition-delay:     0.5s;
+    -o-transition-delay:      0.5s;
+    transition-delay:         0.5s;
+}
+
+#Question span.fast {
+    display: inline-block;
+	font-size:70px;
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+#Question.present .fast {
+	padding-left:10px;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform:    skewX(-20deg);
+    -ms-transform:     skewX(-20deg);
+    -o-transform:      skewX(-20deg);
+    transform:         skewX(-20deg);
+
+    -webkit-transition-delay: 1s;
+    -moz-transition-delay:    1s;
+    -ms-transition-delay:     1s;
+    -o-transition-delay:      1s;
+    transition-delay:         1s;
+}
+
+#CurrentState {
+    width: 600px;
+    text-align: center;
+    font-size: 60px;
+    line-height: 1;
+}
+
+#CurrentState b {
+    display: block;
+    font-size: 250px;
+    line-height: 250px;
+}
+
+#CurrentState .fix {
+    font-size: 90px;
+    line-height: 150px;
+}
+
+#FutureState .footnote {
+    font-size: 32px;
+}
+
+#FutureState.present .footnote {
+    color:red;
+}
+
+#Journey .strikethrough{
+	
+	text-decoration: line-through;
+}
+
+#Journey .infoTech{
+	font-style:italic;
+}
+
+#PhaseIIDetailedReqUserStories .sentanceSubstitute {
+    font-size: 150%;
+    font-weight: bold;
+}
+
+#contact h1{
+	font-size:175%;
+}
+
+#contact h1, p, a  {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style:    preserve-3d; /* Y U need this Firefox?! */
+    -ms-transform-style:     preserve-3d;
+    -o-transform-style:      preserve-3d;
+    transform-style:         preserve-3d;
+}
+
+#contact h1, p, a {
+    display: inline-block;
+    -webkit-transform: translateZ(40px);
+    -moz-transform:    translateZ(40px);
+    -ms-transform:     translateZ(40px);
+    -o-transform:      translateZ(40px);
+     transform:        translateZ(40px);
+
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+#contact .thanks{
+    -webkit-transform: translateZ(0px);
+    -moz-transform:    translateZ(0px);
+    -ms-transform:     translateZ(0px);
+    -o-transform:      translateZ(0px);
+    transform:         translateZ(0px);
+}
+	
+#contact .email{
+    -webkit-transform: translateZ(100px);
+    -moz-transform:    translateZ(100px);
+    -ms-transform:     translateZ(100px);
+    -o-transform:      translateZ(100px);
+    transform:         translateZ(100px);
+}
+	
+#contact .link{
+    -webkit-transform: translateZ(200px);
+    -moz-transform:    translateZ(200px);
+    -ms-transform:     translateZ(200px);
+    -o-transform:      translateZ(200px);
+    transform:         translateZ(200px);
+}
+
+#contact .source{
+    -webkit-transform: translateZ(300px);
+    -moz-transform:    translateZ(300px);
+    -ms-transform:     translateZ(300px);
+    -o-transform:      translateZ(300px);
+    transform:         translateZ(300px);
+}
+
+#contact.present h1,
+#contact.present p,
+#contact.present a {
+    -webkit-transform: translateZ(0px);
+    -moz-transform:    translateZ(0px);
+    -ms-transform:     translateZ(0px);
+    -o-transform:      translateZ(0px);
+    transform:         translateZ(0px);
+}
